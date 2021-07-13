@@ -7,18 +7,21 @@ This repository contains the source codes for data processes and model developme
 
 This is also chapter 2 and chapter 3 of Lydia Brugere's PhD dissertation
 
-### Project Organization
+### Repo Contents
 ------------
-This repo is organized according to the modeling workflow as illustrated below ![flowchart](https://github.com/lydiabrugere/tsrmodel_extended/blob/main/Supplementary_Data/Model_Workflow_Chart.png)
-
 > `Environmental_Covariates_Processing`: The python executables extract all the 20 environmental covariates used in this study from their orignal format and resolution to the 20 km by 20 km grid system; The Jupyter notebook `random_forest_permutation_importance ` computes permutation importances fitted to the trained random forest model.  
 > `Landscape_Metrics_Processing`: Process a total of 50 different landscape metrics from 2016 NLCD raster for continental U.S.
 > `TSR_Outcome_Variable_Processing`: The SQL parse the FIA databases to calculate TSR in FIA plot level and then compile it to the 20 km by 20 km grid system; The Jupyter notebook `target_variable_eda.ipynb` calculate the summary statistics of the TSR and plot the frequency and density distribution.  
 > `Model_Development_Evaluation`: Each jupyter notebook contains model training, hyperparameter tuning, validation and testing as the file name implies. `Model_Results_Comparison` inside this folder are scripts for model results and residuals analysis.   
 > `Supplementary_Data`: contains the 20 km by 20 km grid system used in this study.  
 
-### Model Results
+### Modeling Workflow and Results
+![flowchart](https://github.com/lydiabrugere/tsrmodel_extended/blob/main/Supplementary_Data/Model_Workflow_Chart.png)
+
 ![results](https://github.com/lydiabrugere/tsrmodel_extended/blob/main/Supplementary_Data/Stage1_Result.png)
+
+![results](https://github.com/lydiabrugere/tsrmodel_extended/blob/main/Supplementary_Data/Stage1_Spatial_Pattern.png)
+Figure. Generalized Linear Model (GLM) prediction (a), GLM residuals (b), Random Forest (RF) prediction (c), RF residuals (d), Generalized regression neural network (GRNN) prediction (e), GRNN residuals (f), feedforward neural network (FFNN) prediction (g), FFNN residuals (h). The same map symbology is applied to the prediction maps and the residual maps respectively
 
 ### Tree Species Occurrence Data Sources
 ------------
